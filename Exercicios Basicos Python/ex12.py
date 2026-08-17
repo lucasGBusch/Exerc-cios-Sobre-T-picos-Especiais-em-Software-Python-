@@ -67,28 +67,29 @@ while choice != 0:
                 if busca.lower() == livro["titulo"].lower():
                     print("\nLivro encontrado...")
                     print("\n" + "=" * 30)
-                   
+                    
                     for key, value in livro.items():
                         print(f"{key.title():<10}: {value}")
-                    
-                        encontrado = True
-                        break
+                        
+                
+                    encontrado = True
+                    break
             
             if not encontrado:
-                print("Livro não encontrado...")
+                print("\nLivro não encontrado...")
         case 4:
             excluir = input("Qual livro voce deseja alterar (Digite o titulo): ")
             excluido = False
             
             for livro in livros:
-                if alterar.lower() == livro["titulo"].lower():
+                if excluir.lower() == livro["titulo"].lower():
                     livros.remove(livro)
                     excluido = True
                     print("\nLivro excluido com sucesso!")
                     break
                 
             if not excluido:
-                print("Livro não encontrado...")
+                print("\nLivro não encontrado...")
                 
         case 5:
             print(f"\nQuantidade de livros: {len(livros):<10}")
